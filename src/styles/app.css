@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  /* font-weight: 500; */
+}
+
+@layer components {
+  .btn {
+    @apply px-5 py-3 font-medium outline-none rounded-full transition-all duration-200 inline-flex
+          disabled:cursor-not-allowed disabled:opacity-40 shadow hover:shadow-lg justify-center items-center
+          text-center text-lg;
+  }
+  .btn-primary {
+    @apply text-white bg-primary-600 hover:bg-primary-400 hover:text-black
+          focus:bg-primary-400 focus:text-black focus-within:bg-primary-400 focus-within:text-black
+          disabled:focus:bg-primary-600 disabled:hover:bg-primary-600 disabled:hover:text-white
+          disabled:focus-within:bg-primary-600 disabled:focus:text-white disabled:focus-within:text-white;
+  }
+}
